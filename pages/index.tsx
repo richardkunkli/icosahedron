@@ -1,9 +1,6 @@
-import { useEffect, useRef } from "react";
-import Head from "next/head";
-import Image from "next/image";
+import { useEffect } from "react";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
-import Box from "./three";
+import Box from "../components/three";
 import { Canvas, useThree, extend } from "@react-three/fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
@@ -17,7 +14,7 @@ export default function Home() {
         <ambientLight />
         <CameraController />
         <pointLight position={[10, 10, 10]} />
-        <Box position={[0, 0, 0]} />
+        <Box />
       </Canvas>
     </div>
   );

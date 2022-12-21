@@ -1,14 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import * as THREE from "three";
-import { ThreeElements, useThree } from "@react-three/fiber";
+import { useThree, ThreeElements } from "@react-three/fiber";
 
 interface Vector2D {
   x: number;
   y: number;
 }
 
-export default function Box(props: ThreeElements["mesh"]) {
-  const white = new THREE.Color().setHex(0xffffff);
+const Box: React.FC = (props: ThreeElements["mesh"]) => {
   const ts = useThree();
   const [value, setValue] = useState(0);
   const [detail, setDetail] = useState(0);
@@ -72,4 +71,6 @@ export default function Box(props: ThreeElements["mesh"]) {
       <meshBasicMaterial color={detail == 19 ? "red" : grayColor(value * 10)} />
     </mesh>
   );
-}
+};
+
+export default Box;
