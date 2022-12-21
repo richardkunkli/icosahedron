@@ -66,12 +66,18 @@ const Box: React.FC = (props: ThreeElements["mesh"]) => {
   }, [mousePos]);
 
   return (
-    <mesh ref={ref} onClick={() => handler()}>
-      <icosahedronGeometry args={[2, detail]} />
-      <meshMatcapMaterial
-        color={detail == 19 ? "red" : grayColor(value * 10)}
-      />
-    </mesh>
+    <>
+      <mesh ref={ref} onClick={() => handler()}>
+        <icosahedronGeometry args={[2, detail]} />
+        <meshMatcapMaterial
+          color={detail == 19 ? "red" : grayColor(value * 10)}
+        />
+      </mesh>
+      <mesh ref={ref} onClick={() => handler()}>
+        <icosahedronGeometry args={[2, detail]} />
+        <meshBasicMaterial wireframe />
+      </mesh>
+    </>
   );
 };
 

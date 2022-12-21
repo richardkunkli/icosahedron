@@ -3,7 +3,6 @@ import { Inter } from "@next/font/google";
 import Box from "../components/three";
 import { Canvas, useThree, extend } from "@react-three/fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { Light } from "three";
 extend({ OrbitControls });
 
 const inter = Inter({ subsets: ["latin"] });
