@@ -2,7 +2,7 @@
 This project is a sample work.
 
 ## Technologies
-- React, NextJS
+- React, Next.js
 - React Three Fiber (Three.js)
 
 ## What is it?
