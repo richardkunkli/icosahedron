@@ -68,7 +68,9 @@ const Box: React.FC = (props: ThreeElements["mesh"]) => {
   return (
     <mesh ref={ref} onClick={() => handler()}>
       <icosahedronGeometry args={[2, detail]} />
-      <meshBasicMaterial color={detail == 19 ? "red" : grayColor(value * 10)} />
+      <meshMatcapMaterial
+        color={detail == 19 ? "red" : grayColor(value * 10)}
+      />
     </mesh>
   );
 };
